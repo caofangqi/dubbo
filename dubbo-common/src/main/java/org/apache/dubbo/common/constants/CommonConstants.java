@@ -74,6 +74,8 @@ public interface CommonConstants {
 
     Pattern EQUAL_SPLIT_PATTERN = Pattern.compile("\\s*[=]+\\s*");
 
+    Pattern COLON_SPLIT_PATTERN = Pattern.compile("\\s*[:]+\\s*");
+
     String DEFAULT_PROXY = "javassist";
 
     String DEFAULT_DIRECTORY = "dubbo";
@@ -108,6 +110,8 @@ public interface CommonConstants {
 
     String IO_THREADS_KEY = "iothreads";
 
+    String KEEP_ALIVE_KEY = "keep.alive";
+
     int DEFAULT_QUEUES = 0;
 
     int DEFAULT_ALIVE = 60 * 1000;
@@ -134,7 +138,7 @@ public interface CommonConstants {
 
     String GROUP_CHAR_SEPARATOR = ":";
 
-    String HIDE_KEY_PREFIX = ".";
+    String HIDDEN_KEY_PREFIX = ".";
 
     String DOT_REGEX = "\\.";
 
@@ -188,6 +192,12 @@ public interface CommonConstants {
     String REVISION_KEY = "revision";
 
     String METADATA_KEY = "metadata-type";
+
+    String MAPPING_KEY = "mapping-type";
+
+    String CONFIG_MAPPING_TYPE = "config";
+
+    String METADATA_MAPPING_TYPE = "metadata";
 
     String DEFAULT_METADATA_STORAGE_TYPE = "local";
 
@@ -349,4 +359,26 @@ public interface CommonConstants {
      */
     String DEFAULT_SERVICE_NAME_MAPPING_PROPERTIES_PATH = "META-INF/dubbo/service-name-mapping.properties";
 
+    String REDIS_CLIENT_KEY = "redis-client";
+
+    String MONO_REDIS = "mono";
+
+    String SENTINEL_REDIS = "sentinel";
+
+    String CLUSTER_REDIS = "cluster";
+
+    /** Pseudo URL prefix for loading from the class path: "classpath:". */
+    String CLASSPATH_URL_PREFIX = "classpath:";
+
+    String DEFAULT_VERSION = "0.0.0";
+
+    String CLASS_DESERIALIZE_BLOCK_ALL = "dubbo.security.serialize.blockAllClassExceptAllow";
+
+    String CLASS_DESERIALIZE_ALLOWED_LIST = "dubbo.security.serialize.allowedClassList";
+
+    String CLASS_DESERIALIZE_BLOCKED_LIST = "dubbo.security.serialize.blockedClassList";
+
+    String ENABLE_NATIVE_JAVA_GENERIC_SERIALIZE = "dubbo.security.serialize.generic.native-java-enable";
+
+    String SERIALIZE_BLOCKED_LIST_FILE_PATH = "security/serialize.blockedlist";
 }
